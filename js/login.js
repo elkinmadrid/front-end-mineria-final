@@ -1,6 +1,6 @@
 function login() {
 
-    const url_base = 'https://mineria-api.onrender.com';
+    const url_base = 'https://mineria.onrender.com';
     const fromulario = document.querySelector('form')
     const username = fromulario.elements.username.value
     const password = fromulario.elements.password.value
@@ -23,10 +23,12 @@ function login() {
         data: body
     };
 
-    axios.request(config).then(function (response) {
+    axios.request(config).then(function (response) {    
         console.log(response);
-        if (response.data.message === 'You are logged in successfully') {
-            console.log(document.cookie);
+        if (response.status === 200) {
+            localStorage.setItem('token', response.data.token);
+
+            console.log(localStorage.getItem('token'));
             window.location.href = '/frontend_mineria/tables.html';
         } else {
             alert('Intente de nuevo, por favor.');
