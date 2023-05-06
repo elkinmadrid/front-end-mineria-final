@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Insuficiencia Cardíaca</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.0/js.cookie.min.js"></script>
+
+
+
+    <!-- Custom styles for this template -->
+    <style>
+        /* Estilos para el encabezado */
+        header {
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para la sección principal */
+        main {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+
+        /* Estilos para la sección de ventajas y desventajas */
+        ul.advantages {
+            list-style-type: circle;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul.disadvantages {
+            list-style-type: square;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para el ejemplo */
+        .example {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para las conclusiones */
+        section:last-of-type {
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    </style>
+
+
+</head>
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon ">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Insuficiencia Cardíaca</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="formulario.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Registrar</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Mostrar información</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+
+                <div class="container-fluid">
+
+                    <header>
+                        <h1>Regresión Lineal Múltiple</h1>
+                    </header>
+                    <main>
+                        <section>
+                            <h2>Introducción</h2>
+                            <p>La regresión lineal múltiple es una técnica estadística que permite analizar la relación entre
+                                una
+                                variable de respuesta y varias variables predictoras. Esta técnica es una extensión de la
+                                regresión
+                                lineal simple, que solo permite analizar la relación entre una variable de respuesta y una
+                                variable
+                                predictora.</p>
+                            <p>La regresión lineal múltiple es utilizada en diversos campos, como la economía, la medicina, la
+                                ingeniería, la psicología, entre otros, para predecir valores futuros o para analizar el efecto
+                                de
+                                varias variables en una variable de interés.</p>
+                        </section>
+                        <section>
+                            <h2>Características</h2>
+                            <ul>
+                                <li>Es un modelo estadístico que relaciona varias variables predictoras con una variable de
+                                    respuesta.</li>
+                                <li>Se basa en la suposición de que la relación entre las variables es lineal.</li>
+                                <li>Busca encontrar la línea recta que mejor se ajusta a los datos, minimizando la distancia
+                                    entre
+                                    los valores observados y los valores predichos.</li>
+                                <li>Permite analizar el efecto de varias variables predictoras sobre una variable de respuesta.
+                                </li>
+                                <li>Puede utilizarse para predecir valores futuros.</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>Ventajas y desventajas</h2>
+                            <h3>Ventajas</h3>
+                            <ul>
+                                <li>Permite analizar el efecto de varias variables predictoras sobre una variable de respuesta,
+                                    lo
+                                    que permite una mayor comprensión de los datos.</li>
+                                <li>Puede ser utilizado para predecir valores futuros, lo que resulta útil en diversas
+                                    aplicaciones
+                                    prácticas.</li>
+                                <li>Es una técnica ampliamente utilizada y estudiada en el campo de la estadística.</li>
+                            </ul>
+                            <h3>Desventajas</h3>
+                            <ul>
+                                <li>Puede ser sensible a la presencia de valores atípicos o errores de medición.</li>
+                                <li>Puede ser difícil de interpretar en presencia de variables categóricas o no lineales.</li>
+                                <li>Requiere que se cumplan ciertas suposiciones para que los resultados sean precisos y
+                                    válidos.
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>Aplicaciones</h2>
+                            <p>La regresión lineal múltiple es utilizada en diversas aplicaciones prácticas, entre las que se
+                                incluyen:</p>
+                            <ul>
+                                <li>En economía, para analizar el efecto de varias variables en el precio de un producto.</li>
+                                <li>En medicina, para predecir la evolución de una enfermedad en función de varias variables de
+                                    diagnóstico.</li>
+                                <li>En ingeniería, para analizar el efecto de varias variables en la durabilidad o resistencia
+                                    de un
+                                    material.</li>
+                                <li>En psicología, para analizar el efecto de varias variables en el comportamiento humano.</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>Ejemplo</h2>
+                            <p>Supongamos que un fabricante de muebles desea analizar el efecto de varias variables en el precio
+                                de
+                                venta de sus productos. El fabricante ha recopilado datos de 100 muebles, incluyendo la
+                                dimensión,
+                                el tipo de madera, el tiempo de fabricación y el costo de producción.</p>
+                            <p>El fabricante desea utilizar la regresión lineal múltiple para analizar la relación entre estas
+                                variables y el precio de venta de los muebles.</p>
+                            <p>Después de realizar el análisis, el fabricante encuentra que el costo de producción y el tiempo
+                                de
+                                fabricación tienen un efecto significativo en el precio de venta de los muebles, mientras que la
+                                dimensión y el tipo de madera no tienen un efecto significativo.</p>
+                            <p>Con esta información, el fabricante puede ajustar su proceso de producción para maximizar la
+                                rentabilidad y tomar decisiones informadas sobre los precios de venta de sus productos.</p>
+                        </section>
+                        <section>
+                            <h2>Conclusiones</h2>
+                            <p>La regresión lineal múltiple es una técnica estadística poderosa que permite analizar la relación
+                                entre una variable de respuesta y varias variables predictoras. Esta técnica es utilizada en
+                                diversos campos para predecir valores futuros o para analizar el efecto de varias variables en
+                                una
+                                variable de interés.</p>
+                            <p>Es importante tener en cuenta que la regresión lineal múltiple tiene ciertas limitaciones y
+                                suposiciones que deben ser consideradas para que los resultados sean precisos y válidos. Es
+                                importante utilizarla de manera responsable y comprender sus limitaciones y desventajas para
+                                obtener
+                                resultados precisos y válidos.</p>
+                        </section>
+                    </main>
+
+                </div>
+                <!-- /.container-fluid -->
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2020</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
