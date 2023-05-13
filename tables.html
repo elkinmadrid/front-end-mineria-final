@@ -27,7 +27,20 @@
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 
+    <style>
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 1px solid #dddddd;
+            padding: 15px 0;
+        }
 
+        .sticky-footer .container {
+            text-align: center;
+        }
+    </style>
 
 
 </head>
@@ -129,9 +142,7 @@
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Buscar"
-
-                                            onkeypress=""
+                                            placeholder="Search for..." aria-label="Buscar" onkeypress=""
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
@@ -174,8 +185,8 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Base de datos</h1>
-                
-                
+
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -207,15 +218,15 @@
                                     </tbody>
                                 </table>
                             </div>
-                            
-                
+
+
                         </div>
                     </div>
-                
-                
+
+
                 </div>
                 <!-- /.container-fluid -->
-                
+
                 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
             </div>
             <!-- End of Main Content -->
@@ -224,7 +235,8 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Elkin Madrid, German Torres, Duvan Castro, Aldair Lara y Juan Alonso. All
+                            rights reserved - 2023</span>
                     </div>
                 </div>
             </footer>
@@ -328,8 +340,8 @@
                                 <input type="number" id="kilometraje" name="kilometraje" required style="flex: 1;">
                             </div>
                             <div style="text-align: center;">
-                               
-    
+
+
                             </div>
                         </form>
                     </div>
@@ -338,12 +350,14 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" style="background-color: #c40d0d; color: white; border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;" data-dismiss="modal">Cerrar</button>
+                    <button type="button"
+                        style="background-color: #c40d0d; color: white; border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;"
+                        data-dismiss="modal">Cerrar</button>
 
-                    <input type="button"  value="Actualizar" onClick="actualizarRegistro()"
-                    style="background-color: #007bff; color: white; border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;">
+                    <input type="button" value="Actualizar" onClick="actualizarRegistro()"
+                        style="background-color: #007bff; color: white; border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;">
 
-                    
+
                 </div>
             </div>
         </div>

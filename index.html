@@ -90,6 +90,19 @@
             margin-top: 20px;
             padding-top: 20px;
         }
+
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 1px solid #dddddd;
+            padding: 15px 0;
+        }
+
+        .sticky-footer .container {
+            text-align: center;
+        }
     </style>
 
 
@@ -214,7 +227,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -238,95 +251,231 @@
                     <main>
                         <section>
                             <h2>Introducción</h2>
-                            <p>La regresión lineal múltiple es una técnica estadística que permite analizar la relación entre
-                                una
-                                variable de respuesta y varias variables predictoras. Esta técnica es una extensión de la
-                                regresión
-                                lineal simple, que solo permite analizar la relación entre una variable de respuesta y una
-                                variable
-                                predictora.</p>
-                            <p>La regresión lineal múltiple es utilizada en diversos campos, como la economía, la medicina, la
-                                ingeniería, la psicología, entre otros, para predecir valores futuros o para analizar el efecto
+                            <p>La Regresión Lineal Múltiple es un algoritmo de aprendizaje supervisado que se utiliza
+                                para modelar la relación entre
+                                una variable dependiente (también llamada variable de respuesta o variable de salida) y
+                                dos o más variables independientes
+                                (también conocidas como variables de entrada, variables predictoras o variables
+                                explicativas). Es un método estadístico
+                                que busca ajustar una línea recta (o un plano en el caso de tres o más variables
+                                independientes) a través de los datos
+                                que mejor se ajuste a la relación entre las variables independientes y la variable
+                                dependiente. El objetivo es encontrar
+                                una relación matemática entre las variables independientes y la variable dependiente
+                                para poder hacer predicciones precisas
+                                sobre la variable dependiente en función de los valores de las variables independientes.
+                            </p>
+                            <p>
+                                La Regresión Lineal Múltiple se basa en el supuesto de que la relación entre las
+                                variables independientes
+                                y la variable dependiente es lineal, lo que significa que los cambios en las variables
+                                independientes están relacionados
+                                con cambios proporcionales en la variable dependiente. Por lo tanto, se utiliza un
+                                modelo de regresión lineal múltiple
+                                para describir esta relación lineal entre las variables independientes y la variable
+                                dependiente.
+                            </p>
+                            <p>La regresión lineal múltiple es utilizada en diversos campos, como la economía, la
+                                medicina, la
+                                ingeniería, la psicología, entre otros, para predecir valores futuros o para analizar el
+                                efecto
                                 de
                                 varias variables en una variable de interés.</p>
                         </section>
                         <section>
                             <h2>Características</h2>
                             <ul>
-                                <li>Es un modelo estadístico que relaciona varias variables predictoras con una variable de
-                                    respuesta.</li>
+                                <li>La Regresión Lineal Múltiple es un modelo estadístico que permite modelar la
+                                    relación entre varias variables independientes
+                                    y una variable dependiente. Se utiliza para predecir valores numéricos continuos,
+                                    como precios, ingresos, temperaturas, etc.
+                                </li>
                                 <li>Se basa en la suposición de que la relación entre las variables es lineal.</li>
-                                <li>Busca encontrar la línea recta que mejor se ajusta a los datos, minimizando la distancia
-                                    entre
-                                    los valores observados y los valores predichos.</li>
-                                <li>Permite analizar el efecto de varias variables predictoras sobre una variable de respuesta.
+                                <li>La regresión lineal múltiple puede ser utilizada para modelar relaciones lineales y
+                                    no lineales entre las variables
+                                    independientes y la variable dependiente. Si bien el modelo se basa en la suposición
+                                    de una relación lineal,
+                                    es posible incluir términos no lineales en el modelo para capturar relaciones más
+                                    complejas entre las variables independientes
+                                    y la variable dependiente. Por ejemplo, se pueden incluir términos polinómicos o de
+                                    interacción para modelar relaciones
+                                    no lineales.</li>
+                                <li>Permite analizar el efecto de varias variables predictoras sobre una variable de
+                                    respuesta.
                                 </li>
                                 <li>Puede utilizarse para predecir valores futuros.</li>
+                                <li>La Regresión Lineal Múltiple se utiliza comúnmente en áreas como la economía, la
+                                    ingeniería, la ciencia y
+                                    el análisis de datos en general. Es una herramienta muy útil para identificar las
+                                    variables que más influyen
+                                    en la variable dependiente y para predecir valores numéricos continuos.
+                                </li>
                             </ul>
                         </section>
                         <section>
                             <h2>Ventajas y desventajas</h2>
                             <h3>Ventajas</h3>
                             <ul>
-                                <li>Permite analizar el efecto de varias variables predictoras sobre una variable de respuesta,
-                                    lo
-                                    que permite una mayor comprensión de los datos.</li>
+                                <li>La Regresión Lineal Múltiple es un modelo simple y fácil de entender. A diferencia
+                                    de otros modelos más complejos,
+                                    como las redes neuronales o los árboles de decisión, la Regresión Lineal Múltiple
+                                    puede ser explicada fácilmente
+                                    y su interpretación es clara.</li>
                                 <li>Puede ser utilizado para predecir valores futuros, lo que resulta útil en diversas
                                     aplicaciones
                                     prácticas.</li>
                                 <li>Es una técnica ampliamente utilizada y estudiada en el campo de la estadística.</li>
+                                <li>La Regresión Lineal Múltiple también es útil para hacer predicciones precisas. El
+                                    modelo utiliza una línea recta
+                                    (o un plano en el caso de tres o más variables independientes) para modelar la
+                                    relación entre las variables
+                                    independientes y la variable dependiente. Esta línea recta se utiliza para predecir
+                                    valores de la variable dependiente
+                                    en función de los valores de las variables independientes.
+                                </li>
+                                <li>Es un algoritmo ampliamente utilizado y estudiado. Hay una gran cantidad de
+                                    literatura y recursos disponibles
+                                    sobre la Regresión Lineal Múltiple, lo que hace que sea más fácil para los
+                                    investigadores y los profesionales de datos
+                                    utilizarlo en sus trabajos.
+                                </li>
                             </ul>
                             <h3>Desventajas</h3>
                             <ul>
                                 <li>Puede ser sensible a la presencia de valores atípicos o errores de medición.</li>
-                                <li>Puede ser difícil de interpretar en presencia de variables categóricas o no lineales.</li>
+                                <li>Puede ser difícil de interpretar en presencia de variables categóricas o no
+                                    lineales.</li>
                                 <li>Requiere que se cumplan ciertas suposiciones para que los resultados sean precisos y
                                     válidos.
                                 </li>
+                                <li>
+                                    También asume que no hay multicolinealidad entre las variables independientes. Esto
+                                    se refiere a la existencia de una
+                                    alta correlación entre dos o más variables independientes. Si hay multicolinealidad
+                                    en los datos, puede ser difícil
+                                    determinar qué variable independiente está influyendo en la variable dependiente, el
+                                    modelo puede ser menos preciso.
+                                </li>
+                                <li>La Regresión Lineal Múltiple también asume que los errores (diferencia entre los
+                                    valores observados y los valores predichos)
+                                    tienen una distribución normal.
+                                    Si los errores no tienen una distribución normal, puede ser necesario utilizar un
+                                    modelo diferente.</li>
                             </ul>
                         </section>
                         <section>
                             <h2>Aplicaciones</h2>
-                            <p>La regresión lineal múltiple es utilizada en diversas aplicaciones prácticas, entre las que se
+                            <p>La regresión lineal múltiple es utilizada en diversas aplicaciones prácticas, entre las
+                                que se
                                 incluyen:</p>
                             <ul>
-                                <li>En economía, para analizar el efecto de varias variables en el precio de un producto.</li>
-                                <li>En medicina, para predecir la evolución de una enfermedad en función de varias variables de
+                                <li>En economía, para analizar el efecto de varias variables en el precio de un
+                                    producto.</li>
+                                <li>En medicina, para predecir la evolución de una enfermedad en función de varias
+                                    variables de
                                     diagnóstico.</li>
-                                <li>En ingeniería, para analizar el efecto de varias variables en la durabilidad o resistencia
+                                <li>En ingeniería, para analizar el efecto de varias variables en la durabilidad o
+                                    resistencia
                                     de un
                                     material.</li>
-                                <li>En psicología, para analizar el efecto de varias variables en el comportamiento humano.</li>
+                                <li>En psicología, para analizar el efecto de varias variables en el comportamiento
+                                    humano.</li>
                             </ul>
                         </section>
                         <section>
+                            <h2>Validación del funcionamiento:</h2>
+                            <p>
+
+                                La validación del funcionamiento de un modelo de Regresión Lineal Múltiple se realiza
+                                mediante técnicas de
+                                validación cruzada y pruebas estadísticas.
+                                La validación cruzada implica dividir los datos en varias partes y ajustar el modelo a
+                                cada una de ellas.
+                                El modelo se evalúa utilizando la parte restante de los datos que no se utilizaron para
+                                el ajuste.
+                            </p>
+                            <p>
+                                Esto se repite varias veces para asegurarse de que el modelo tenga un buen rendimiento
+                                en diferentes conjuntos de datos.
+                                Las pruebas estadísticas se utilizan para determinar la significancia de los
+                                coeficientes de las variables independientes. Se utilizan pruebas de hipótesis para
+                                determinar si un coeficiente es significativamente diferente de cero. Si un coeficiente
+                                es significativamente diferente de cero, esto indica que la variable independiente
+                                correspondiente tiene un impacto significativo en la variable dependiente.
+                                En resumen, la Regresión Lineal Múltiple es un algoritmo de aprendizaje supervisado que
+                                se utiliza para modelar la relación entre múltiples variables independientes y una
+                                variable dependiente continua. Es ampliamente utilizado en la industria y la
+                                investigación debido a su simplicidad, interpretación y precisión.
+                                Para validar el funcionamiento de un modelo de Regresión Lineal Múltiple, es importante
+                                utilizar técnicas de validación cruzada y pruebas estadísticas para asegurarse de que el
+                                modelo tenga un buen rendimiento en diferentes conjuntos de datos y que los coeficientes
+                                de las variables independientes sean significativamente diferentes de cero.
+                                En general, la Regresión Lineal Múltiple es un algoritmo valioso para el análisis de
+                                datos y la toma de decisiones. Sin embargo, es importante comprender sus supuestos y
+                                limitaciones para garantizar que se utilice de manera efectiva en diferentes
+                                situaciones.
+
+
+                            </p>
+                        </section>
+                        <section>
                             <h2>Ejemplo</h2>
-                            <p>Supongamos que un fabricante de muebles desea analizar el efecto de varias variables en el precio
+                            <p>Supongamos que un fabricante de muebles desea analizar el efecto de varias variables en
+                                el precio
                                 de
                                 venta de sus productos. El fabricante ha recopilado datos de 100 muebles, incluyendo la
                                 dimensión,
                                 el tipo de madera, el tiempo de fabricación y el costo de producción.</p>
-                            <p>El fabricante desea utilizar la regresión lineal múltiple para analizar la relación entre estas
+                            <p>El fabricante desea utilizar la regresión lineal múltiple para analizar la relación entre
+                                estas
                                 variables y el precio de venta de los muebles.</p>
-                            <p>Después de realizar el análisis, el fabricante encuentra que el costo de producción y el tiempo
+                            <p>Después de realizar el análisis, el fabricante encuentra que el costo de producción y el
+                                tiempo
                                 de
-                                fabricación tienen un efecto significativo en el precio de venta de los muebles, mientras que la
+                                fabricación tienen un efecto significativo en el precio de venta de los muebles,
+                                mientras que la
                                 dimensión y el tipo de madera no tienen un efecto significativo.</p>
-                            <p>Con esta información, el fabricante puede ajustar su proceso de producción para maximizar la
-                                rentabilidad y tomar decisiones informadas sobre los precios de venta de sus productos.</p>
+                            <p>Con esta información, el fabricante puede ajustar su proceso de producción para maximizar
+                                la
+                                rentabilidad y tomar decisiones informadas sobre los precios de venta de sus productos.
+                            </p>
                         </section>
                         <section>
                             <h2>Conclusiones</h2>
-                            <p>La regresión lineal múltiple es una técnica estadística poderosa que permite analizar la relación
-                                entre una variable de respuesta y varias variables predictoras. Esta técnica es utilizada en
-                                diversos campos para predecir valores futuros o para analizar el efecto de varias variables en
+                            <p>La regresión lineal múltiple es una técnica estadística poderosa que permite analizar la
+                                relación
+                                entre una variable de respuesta y varias variables predictoras. Esta técnica es
+                                utilizada en
+                                diversos campos para predecir valores futuros o para analizar el efecto de varias
+                                variables en
                                 una
                                 variable de interés.</p>
-                            <p>Es importante tener en cuenta que la regresión lineal múltiple tiene ciertas limitaciones y
-                                suposiciones que deben ser consideradas para que los resultados sean precisos y válidos. Es
-                                importante utilizarla de manera responsable y comprender sus limitaciones y desventajas para
+                            <p>Es importante tener en cuenta que la regresión lineal múltiple tiene ciertas limitaciones
+                                y
+                                suposiciones que deben ser consideradas para que los resultados sean precisos y válidos.
+                                Es
+                                importante utilizarla de manera responsable y comprender sus limitaciones y desventajas
+                                para
                                 obtener
                                 resultados precisos y válidos.</p>
+                        </section>
+                        <section>
+                            <h2>Referencias</h2>
+                            <cite>Hair Jr, J. F., Black, W. C., Babin, B. J., Anderson, R. E., & Tatham, R. L. (2013).
+                                Multivariate data analysis (Vol. 7). Upper Saddle River, NJ: Pearson.</cite>
+                            <br>
+                            <br>
+                            <cite>James, G., Witten, D., Hastie, T., & Tibshirani, R. (2017). An introduction to
+                                statistical learning: With applications in R. New York: Springer.</cite>
+                            <br>
+                            <br>
+                            <cite>Montgomery, D. C., Peck, E. A., & Vining, G. G. (2012). Introduction to linear
+                                regression analysis. Hoboken, NJ: Wiley.</cite>
+                            <br>
+                            <br>
+                            <cite>Hastie, T., Tibshirani, R., & Friedman, J. (2009). The elements of statistical
+                                learning: data mining, inference, and prediction. Springer Science & Business
+                                Media.</cite>
                         </section>
                     </main>
 
@@ -336,7 +485,8 @@
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2023</span>
+                            <span>Copyright &copy; Elkin Madrid, German Torres, Duvan Castro, Aldair Lara y Juan Alonso.
+                                All rights reserved - 2023</span>
                         </div>
                     </div>
                 </footer>

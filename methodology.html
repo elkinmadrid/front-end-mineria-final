@@ -90,6 +90,19 @@
             margin-top: 20px;
             padding-top: 20px;
         }
+
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 1px solid #dddddd;
+            padding: 15px 0;
+        }
+
+        .sticky-footer .container {
+            text-align: center;
+        }
     </style>
 
 
@@ -214,7 +227,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -238,23 +251,35 @@
                     <main>
                         <section>
                             <h2>Introducción</h2>
-                            <p>CRISP-DM (Cross Industry Standard Process for Data Mining) proporciona una descripción normalizada del ciclo de vida de un 
-                                proyecto estándar de análisis de datos, de forma análoga a como se hace en la ingeniería del software con los modelos de ciclo de vida 
-                                de desarrollo de software. El modelo CRISP-DM cubre las fases de un proyecto, sus tareas respectivas, y las relaciones entre estas tareas. 
-                                En este nivel de descripción no es posible identificar todas las relaciones; las relaciones podrían existir entre cualquier tarea 
+                            <p>CRISP-DM (Cross Industry Standard Process for Data Mining) proporciona una descripción
+                                normalizada del ciclo de vida de un
+                                proyecto estándar de análisis de datos, de forma análoga a como se hace en la ingeniería
+                                del software con los modelos de ciclo de vida
+                                de desarrollo de software. El modelo CRISP-DM cubre las fases de un proyecto, sus tareas
+                                respectivas, y las relaciones entre estas tareas.
+                                En este nivel de descripción no es posible identificar todas las relaciones; las
+                                relaciones podrían existir entre cualquier tarea
                                 según los objetivos, el contexto, y el interés del usuario sobre los datos.</p>
-                            <p>CRISP-DM (Cross Industry Standard Process for Data Mining) es un modelo de proceso estándar para el desarrollo de proyectos de minería de datos. Fue desarrollado por un consorcio de empresas de diferentes industrias y se ha convertido en el modelo de proceso más utilizado en la minería de datos.</p>
-                            <p>Y es que surgen algunas limitaciones de la metodología frente a los cambios en los proyectos de ciencia de datos durante los últimos años, que requieren que esta se adapte a nuevas formas de hacer, 
+                            <p>CRISP-DM (Cross Industry Standard Process for Data Mining) es un modelo de proceso
+                                estándar para el desarrollo de proyectos de minería de datos. Fue desarrollado por un
+                                consorcio de empresas de diferentes industrias y se ha convertido en el modelo de
+                                proceso más utilizado en la minería de datos.</p>
+                            <p>Y es que surgen algunas limitaciones de la metodología frente a los cambios en los
+                                proyectos de ciencia de datos durante los últimos años, que requieren que esta se adapte
+                                a nuevas formas de hacer,
                                 incluyendo nuevas fases o aplicándola solo en determinadas partes de los proyectos.
-                                Desde el Instituto de Ingeniería del Conocimiento (IIC), por ejemplo, 
-                                hemos comprobado que puede ser especialmente útil para planificar y explicar la gestión y ejecución de los proyectos a determinados clientes.</p>
+                                Desde el Instituto de Ingeniería del Conocimiento (IIC), por ejemplo,
+                                hemos comprobado que puede ser especialmente útil para planificar y explicar la gestión
+                                y ejecución de los proyectos a determinados clientes.</p>
                         </section>
                         <section>
                             <h2>Fases de la metodologia</h2>
                             <ul>
-                                <li>Fase I. Business Understanding. Definición de necesidades del cliente (comprensión del negocio).</li>
+                                <li>Fase I. Business Understanding. Definición de necesidades del cliente (comprensión
+                                    del negocio).</li>
                                 <li>Fase II. Data Understanding. Estudio y comprensión de los datos.</li>
-                                <li>Fase III. Data Preparation. Análisis de los datos y selección de características.</li>
+                                <li>Fase III. Data Preparation. Análisis de los datos y selección de características.
+                                </li>
                                 <li>Fase IV. Modeling. Modelado.</li>
                                 <li>Fase V. Evaluation. Evaluación (obtención de resultados).</li>
                                 <li>Fase VI. Deployment. Despliegue (puesta en producción).</li>
@@ -264,43 +289,92 @@
                             <h2>Ventajas y desventajas</h2>
                             <h3>Ventajas</h3>
                             <ul>
-                                <li>Es un modelo de proceso estándar y ampliamente utilizado en la industria de la minería de datos.</li>
-                                <li>Proporciona una estructura clara para el desarrollo de proyectos de minería de datos.</li>
+                                <li>Es un modelo de proceso estándar y ampliamente utilizado en la industria de la
+                                    minería de datos.</li>
+                                <li>Proporciona una estructura clara para el desarrollo de proyectos de minería de
+                                    datos.</li>
                                 <li>Es adaptable a diferentes problemas de negocio y tipos de datos.</li>
                             </ul>
                             <h3>Desventajas</h3>
                             <ul>
-                                <li>Puede ser demasiado estructurado y riguroso para proyectos más pequeños o menos complejos.</li>
-                                <li>Es un modelo de proceso lineal y puede no ser adecuado para problemas complejos que requieren iteraciones y ajustes constantes.</li>
-                                
+                                <li>Puede ser demasiado estructurado y riguroso para proyectos más pequeños o menos
+                                    complejos.</li>
+                                <li>Es un modelo de proceso lineal y puede no ser adecuado para problemas complejos que
+                                    requieren iteraciones y ajustes constantes.</li>
+
                             </ul>
                         </section>
                         <section>
                             <h2>Aplicaciones</h2>
-                            <p>CRISP-DM se utiliza en una amplia variedad de aplicaciones de minería de datos, incluyendo la identificación de patrones de comportamiento del cliente, la detección de fraudes y la predicción de resultados financieros</p>
+                            <p>CRISP-DM se utiliza en una amplia variedad de aplicaciones de minería de datos,
+                                incluyendo la identificación de patrones de comportamiento del cliente, la detección de
+                                fraudes y la predicción de resultados financieros</p>
                         </section>
                         <section>
                             <h2>En nuestro proyecto</h2>
                             <ul>
-                                <li>Comprensión del problema: El problema que se quiere resolver con estos datos es predecir la mortalidad de los pacientes con insuficiencia cardíaca en función de una serie de características clínicas y de laboratorio. El objetivo del proyecto es desarrollar un modelo que pueda predecir con precisión la mortalidad de los pacientes.</li>
-                                <li>Comprensión de los datos: Los datos están disponibles en el archivo heart_failure_clinical_records_dataset.csv. Este conjunto de datos contiene información sobre 299 pacientes con insuficiencia cardíaca, incluyendo características clínicas y de laboratorio. Antes de comenzar a analizar los datos, debemos explorarlos y analizarlos para comprender la relación con el problema a resolver. En el caso de la regresión lineal múltiple, es importante tener en cuenta que los datos deben cumplir ciertos supuestos, como la linealidad, la normalidad, y la independencia. También es importante verificar que no haya valores faltantes y que los datos estén correctamente etiquetados.</li>
-                                <li>Preparación de los datos: Antes de ajustar el modelo de regresión lineal múltiple, se pueden realizar diversas tareas de limpieza y transformación de datos para asegurarse de que los datos sean aptos para el modelo. Es posible que necesitemos realizar un preprocesamiento de datos antes de poder analizarlos y modelarlos. Esto puede incluir la eliminación de valores faltantes, la normalización de datos, sustitucion por media, moda o mediana segun sea el caso y la selección de características relevantes. 
-                                    Es importante tener en cuenta que la selección de características debe basarse en su relevancia y no solo en su correlación con la variable de resultado.
+                                <li>Comprensión del problema: El problema que se quiere resolver con estos datos es
+                                    predecir la mortalidad de los pacientes con insuficiencia cardíaca en función de una
+                                    serie de características clínicas y de laboratorio. El objetivo del proyecto es
+                                    desarrollar un modelo que pueda predecir con precisión la mortalidad de los
+                                    pacientes.</li>
+                                <li>Comprensión de los datos: Los datos están disponibles en el archivo
+                                    heart_failure_clinical_records_dataset.csv. Este conjunto de datos contiene
+                                    información sobre 299 pacientes con insuficiencia cardíaca, incluyendo
+                                    características clínicas y de laboratorio. Antes de comenzar a analizar los datos,
+                                    debemos explorarlos y analizarlos para comprender la relación con el problema a
+                                    resolver. En el caso de la regresión lineal múltiple, es importante tener en cuenta
+                                    que los datos deben cumplir ciertos supuestos, como la linealidad, la normalidad, y
+                                    la independencia. También es importante verificar que no haya valores faltantes y
+                                    que los datos estén correctamente etiquetados.</li>
+                                <li>Preparación de los datos: Antes de ajustar el modelo de regresión lineal múltiple,
+                                    se pueden realizar diversas tareas de limpieza y transformación de datos para
+                                    asegurarse de que los datos sean aptos para el modelo. Es posible que necesitemos
+                                    realizar un preprocesamiento de datos antes de poder analizarlos y modelarlos. Esto
+                                    puede incluir la eliminación de valores faltantes, la normalización de datos,
+                                    sustitucion por media, moda o mediana segun sea el caso y la selección de
+                                    características relevantes.
+                                    Es importante tener en cuenta que la selección de características debe basarse en su
+                                    relevancia y no solo en su correlación con la variable de resultado.
                                     Todo esta preparacion se realizará desde google Colab .</li>
-                                <li>Modelización: Se pueden aplicar varios modelos de machine learning a los datos, incluyendo modelos de regresión , árboles de decisión, redes neuronales,etc. Debemos seleccionar el modelo que mejor se ajuste a los datos y que proporcione la mayor precisión posible en la predicción de la mortalidad, para este ejercicio usaremos el modelo de regresion lineal multiple, tal cual lo sugieré la clasificacion realizada directamente de la pagina que contiene el set de datos.El modelo de regresión lineal múltiple se ajustará a los datos para predecir la mortalidad de los pacientes con insuficiencia cardíaca en base a las características clínicas y resultados de laboratorio de los pacientes. </li>
-                                <li>Evaluación: Es importante evaluar el modelo seleccionado para asegurarnos de que cumpla con los objetivos del proyecto. Esto puede incluir el score, la sensibilidad, la predicción y otras métricas de rendimiento.</li>
-                                <li>Despliegue: Una vez que se ha seleccionado el modelo y se ha evaluado su rendimiento, se puede implementar en producción. Es importante monitorear el rendimiento del modelo en producción y realizar ajustes según sea necesario para mantener su eficacia en la resolución del problema.
-                                    También es importante tener en cuenta que los datos utilizados en la implementación deben cumplir con los mismos supuestos que se verificaron durante la comprensión de los datos.
-                                    </li>
+                                <li>Modelización: Se pueden aplicar varios modelos de machine learning a los datos,
+                                    incluyendo modelos de regresión , árboles de decisión, redes neuronales,etc. Debemos
+                                    seleccionar el modelo que mejor se ajuste a los datos y que proporcione la mayor
+                                    precisión posible en la predicción de la mortalidad, para este ejercicio usaremos el
+                                    modelo de regresion lineal multiple, tal cual lo sugieré la clasificacion realizada
+                                    directamente de la pagina que contiene el set de datos.El modelo de regresión lineal
+                                    múltiple se ajustará a los datos para predecir la mortalidad de los pacientes con
+                                    insuficiencia cardíaca en base a las características clínicas y resultados de
+                                    laboratorio de los pacientes. </li>
+                                <li>Evaluación: Es importante evaluar el modelo seleccionado para asegurarnos de que
+                                    cumpla con los objetivos del proyecto. Esto puede incluir el score, la sensibilidad,
+                                    la predicción y otras métricas de rendimiento.</li>
+                                <li>Despliegue: Una vez que se ha seleccionado el modelo y se ha evaluado su
+                                    rendimiento, se puede implementar en producción. Es importante monitorear el
+                                    rendimiento del modelo en producción y realizar ajustes según sea necesario para
+                                    mantener su eficacia en la resolución del problema.
+                                    También es importante tener en cuenta que los datos utilizados en la implementación
+                                    deben cumplir con los mismos supuestos que se verificaron durante la comprensión de
+                                    los datos.
+                                </li>
                             </ul>
                         </section>
                         <section>
                             <h2>Conclusiones</h2>
-                            <p>CRISP-DM es un modelo de proceso estándar y ampliamente utilizado para el desarrollo de proyectos de minería
-                                de datos. A través de sus seis fases principales, CRISP-DM proporciona una estructura clara para el desarrollo de proyectos de minería de datos y es adaptable a diferentes problemas de negocio y tipos de datos.</p>
-                            <p>Las empresas pueden beneficiarse de la utilización de CRISP-DM para proyectos de minería de datos al proporcionar una metodología estructurada para el desarrollo de soluciones. Es importante tener en cuenta que CRISP-DM 
-                                es un modelo de proceso lineal, por lo que puede no ser adecuado para problemas complejos que requieren iteraciones y ajustes constantes. En general, CRISP-DM es una herramienta valiosa para cualquier empresa que desee implementar proyectos de minería de datos 
-                                y proporciona un enfoque sistemático para abordar y resolver problemas empresariales mediante el análisis de datos.</p>
+                            <p>CRISP-DM es un modelo de proceso estándar y ampliamente utilizado para el desarrollo de
+                                proyectos de minería
+                                de datos. A través de sus seis fases principales, CRISP-DM proporciona una estructura
+                                clara para el desarrollo de proyectos de minería de datos y es adaptable a diferentes
+                                problemas de negocio y tipos de datos.</p>
+                            <p>Las empresas pueden beneficiarse de la utilización de CRISP-DM para proyectos de minería
+                                de datos al proporcionar una metodología estructurada para el desarrollo de soluciones.
+                                Es importante tener en cuenta que CRISP-DM
+                                es un modelo de proceso lineal, por lo que puede no ser adecuado para problemas
+                                complejos que requieren iteraciones y ajustes constantes. En general, CRISP-DM es una
+                                herramienta valiosa para cualquier empresa que desee implementar proyectos de minería de
+                                datos
+                                y proporciona un enfoque sistemático para abordar y resolver problemas empresariales
+                                mediante el análisis de datos.</p>
                         </section>
                     </main>
 
@@ -310,7 +384,8 @@
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2023</span>
+                            <span>Copyright &copy; Elkin Madrid, German Torres, Duvan Castro, Aldair Lara y Juan Alonso.
+                                All rights reserved - 2023</span>
                         </div>
                     </div>
                 </footer>
