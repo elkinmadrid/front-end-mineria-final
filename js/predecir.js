@@ -4,7 +4,7 @@ function limpiar() {
     document.getElementById("carheight").value = "";
     document.getElementById("carwidth").value = "";
     document.getElementById("carlength").value = "";
-    document.getElementById("price").value = "";
+    if (document.getElementById("price") !== null) document.getElementById("price").value = "";
 
     document.getElementById('doornumber').value = "";
     document.getElementById('enginelocation').value = "";
@@ -91,6 +91,8 @@ function predecir() {
     const carbodySelect = document.getElementById('carbody').value;
     const fueltypeSelect = document.getElementById('fueltype').value;
     const drivewheelSelect = document.getElementById('drivewheel').value;
+    const enginetypeSelect = document.getElementById('enginetype').value;
+    const companynameSelect = document.getElementById('companyname').value;
 
     let formValues = {
         "horsepower": horsepower,
@@ -102,7 +104,9 @@ function predecir() {
         "enginelocation": enginelocationSelect,
         "drivewheel": drivewheelSelect,
         "fueltype": fueltypeSelect,
-        "carbodySelect": carbodySelect
+        "carbody": carbodySelect,
+        "enginetype": enginetypeSelect,
+        "companyname": companynameSelect
     };
 
     let config = {
@@ -124,8 +128,10 @@ function predecir() {
         console.log(response);
         let diag = document.getElementById('diag')
         if (response.status === 200) {
-            const mensaje = `Mae = ${response.data.data.mae}, mse = ${response.data.data.mse}, score = ${response.data.data.score}, 
-                    el precio de la predicion es ${response.data.data.price}`
+            const mensaje = `Mae = <strong>${response.data.data.mae}</strong>, <br> 
+            mse = <strong>${response.data.data.mse}</strong>, <br> , 
+            score = <strong>${response.data.data.score}</strong>, <br> , 
+                    el precio de la predicion es <strong>${response.data.data.price}</strong>, <br> `
             diag.innerHTML = mensaje
             limpiar()
 
