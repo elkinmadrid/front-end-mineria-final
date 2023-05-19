@@ -29,7 +29,7 @@ function login() {
             localStorage.setItem('token', response.data.token);
 
             console.log(localStorage.getItem('token'));
-            window.location.href = '/frontend_mineria/tables.html';
+            window.location.href = '/front-end-mineria-final/tables.html';
         } else {
             alert('Intente de nuevo, por favor.');
         }

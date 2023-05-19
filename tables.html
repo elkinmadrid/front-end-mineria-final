@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Informacion de Insuficiencia Cardíaca</title>
+    <title>Informacion de Car Price</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -58,7 +58,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-hospital"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Insuficiencia Cardíaca</div>
+                <div class="sidebar-brand-text mx-3">Car Price</div>
             </a>
 
             <!-- Divider -->
@@ -83,7 +83,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="formulario.html">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Registrar</span></a>
+                    <span>Predecir</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -189,8 +189,10 @@
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Datos Insuficiencia Cardíaca</h6>
+                        <div class="card-header py-3 d-flex justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Datos Car Price</h6>
+                            <input type="button" onClick="abrirModalInsert()" class="btn btn-default ml-auto insert"
+                                value="Añadir">
                         </div>
                         <div class="card-body">
                             <div class="table-responsive" style="height: 500px; overflow-y: auto;">
@@ -198,19 +200,19 @@
                                     <thead class="light">
                                         <tr>
                                             <th scope="col">ID</th>
-                                            <th scope="col">edad</th>
-                                            <th scope="col">anemia</th>
-                                            <th scope="col">creatinina fosfoquinasa</th>
-                                            <th scope="col">diabetes</th>
-                                            <th scope="col">fraccion de eyeccion</th>
-                                            <th scope="col">presion arterial alta</th>
-                                            <th scope="col">plaquetas</th>
-                                            <th scope="col">creatinina serica</th>
-                                            <th scope="col">sodio serico</th>
-                                            <th scope="col">sexo</th>
-                                            <th scope="col">fumador</th>
-                                            <th scope="col">Seguimiento_dias</th>
-                                            <th scope="col">Muerte</th>
+                                            <th scope="col">Tipo de Combustible</th>
+                                            <th scope="col">Marca</th>
+                                            <th scope="col">Cantidad de puertas</th>
+                                            <th scope="col">Tipo de carroceria</th>
+                                            <th scope="col">Tipo de transmisión</th>
+                                            <th scope="col">Ubicacion del motor</th>
+                                            <th scope="col">Longitud del Auto</th>
+                                            <th scope="col">Ancho del Auto</th>
+                                            <th scope="col">Altura del Auto</th>
+                                            <th scope="col">Tipo motor</th>
+                                            <th scope="col">Tamaño del motor</th>
+                                            <th scope="col">Potencia</th>
+                                            <th scope="col">Precio</th>
                                             <th>Opciones</th>
                                         </tr>
                                     </thead>
@@ -296,7 +298,7 @@
     <!-- actualizar Modal-->
     <div class="modal fade" id="fm_actualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Actualizar de Datos</h5>
@@ -307,46 +309,66 @@
 
                 <!-- Formulario -->
                 <div class="modal-body">
-                    <div class="text-center">
-                        <form style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <label for="precio" style="width: 100px;">Precio:</label>
-                                <input type="text" id="precio" name="precio" required style="flex: 1;">
-                            </div>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <label for="marca" style="width: 100px;">Marca:</label>
-                                <input type="text" id="marca" name="marca" required style="flex: 1;">
-                            </div>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <label for="modelo" style="width: 100px;">Modelo:</label>
-                                <input type="text" id="modelo" name="modelo" required style="flex: 1;">
-                            </div>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <label for="anio" style="width: 100px;">Año:</label>
-                                <input type="number" id="anio" name="anio" required style="flex: 1;">
-                            </div>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <label for="color" style="width: 100px;">Color:</label>
-                                <input type="text" id="color" name="color" required style="flex: 1;">
-                            </div>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <label for="kilometraje" style="width: 100px;">Kilometraje:</label>
-                                <input type="number" id="kilometraje" name="kilometraje" required style="flex: 1;">
-                            </div>
-                            <div style="text-align: center;">
-
-
-                            </div>
-                        </form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label>Numero de Puertas:</label>
+                            <select class="form-control" id="doornumber" name="doornumber"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo Combustible:</label>
+                            <select class="form-control" id="fueltype" name="fueltype"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Marca:</label>
+                            <select class="form-control" id="companyname" name="companyname"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo Carroceria:</label>
+                            <select class="form-control" id="carbody" name="carbody"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Localizacion del Motor:</label>
+                            <select class="form-control" id="enginelocation" name="enginelocation"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo Transmision:</label>
+                            <select class="form-control" id="drivewheel" name="drivewheel"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo motor:</label>
+                            <select class="form-control" id="enginetype" name="enginetype"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Longitud del carro:</label>
+                            <input type="number" id="carlength" class="form-control"
+                                placeholder="Digite la longitud del carro" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Ancho del carro:</label>
+                            <input type="number" id="carwidth" class="form-control"
+                                placeholder="Digite el ancho del carro" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Altura del carro:</label>
+                            <input type="number" id="carheight" class="form-control"
+                                placeholder="Digite la Altura del carro" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tamaño del motor:</label>
+                            <input type="number" id="enginesize" class="form-control"
+                                placeholder="Digite el tamaño del motor" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Potencia:</label>
+                            <input type="number" id="horsepower" step="0.01" class="form-control"
+                                placeholder="Digite la potencia" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Precio:</label>
+                            <input type="number" id="price" step="0.01" class="form-control"
+                                placeholder="Digite el precio" />
+                        </div>
                     </div>
-
-
                 </div>
 
                 <div class="modal-footer">
@@ -354,7 +376,10 @@
                         style="background-color: #c40d0d; color: white; border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;"
                         data-dismiss="modal">Cerrar</button>
 
-                    <input type="button" value="Actualizar" onClick="actualizarRegistro()"
+                    <input type="button" id="actualizar" value="Actualizar" onClick="actualizarRegistro()"
+                        style="background-color: #007bff; color: white; border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;">
+
+                    <input type="button" id="insertar" value="Insertar" onClick="insertaRegistro()"
                         style="background-color: #007bff; color: white; border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;">
 
 
@@ -377,6 +402,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/tables.js"></script>
+    <script src="js/predecir.js"></script>
 
 </body>
 

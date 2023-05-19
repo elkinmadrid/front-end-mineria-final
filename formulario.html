@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CRISP-DM</title>
+    <title>Predecir</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,76 +20,7 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.0/js.cookie.min.js"></script>
-
-
-
-    <!-- Custom styles for this template -->
     <style>
-        /* Estilos para el encabezado */
-        header {
-            color: rgb(0, 0, 0);
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        /* Estilos para la sección principal */
-        main {
-            margin: 20px auto;
-            max-width: 800px;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-left: 20px;
-        }
-
-        /* Estilos para la sección de ventajas y desventajas */
-        ul.advantages {
-            list-style-type: circle;
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        ul.disadvantages {
-            list-style-type: square;
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        /* Estilos para el ejemplo */
-        .example {
-            background-color: #f4f4f4;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        /* Estilos para las conclusiones */
-        section:last-of-type {
-            border-top: 1px solid #ccc;
-            margin-top: 20px;
-            padding-top: 20px;
-        }
         .sticky-footer {
             position: fixed;
             bottom: 0;
@@ -104,9 +35,7 @@
         }
     </style>
 
-
 </head>
-
 
 <body id="page-top">
 
@@ -118,10 +47,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon ">
-                    <i class="fas fa-hospital"></i>
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-motorcycle"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">CRISP-DM</div>
+                <div class="sidebar-brand-text mx-3">MOTOS COLOMBIA </div>
             </a>
 
             <!-- Divider -->
@@ -214,6 +143,10 @@
                             </div>
                         </li>
 
+
+
+
+
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -244,49 +177,80 @@
 
                 <div class="container">
 
-                    <header>
-                        <h1>Contactenos</h1>
-                    </header>
+                    <h1 class="text-center mb-5">Predecir precio</h1>
+
+                    <!-- Formulario -->
                     <div class="row">
-                        <div class="col-lg-6">
-
-                            <label>Nombre:</label>
-                            <input type="text" id="nombre" class="form-control" placeholder="Digite su nombre" />
-                        </div>
-                        <div class="col-lg-6">
-                            <label>Email:</label>
-                            <input type="email" class="form-control" placeholder="Digite su email" id="email_user"/>
-                        </div>
-                        <div class="col-lg-6">
-                            <label>Telefono:</label>
-                            <input type="text" class="form-control" placeholder="Digite su telefono" id="telefono"/>
-                        </div>
-                        <div class="col-lg-6">
-                            <label>Asunto:</label>
-                            <input type="text" class="form-control" placeholder="Escriba un asunto" id="asunto" />
-                        </div>
-                        <div class="col-lg-6">
-                            <label>Mensaje:</label>
-                            <textarea class="form-control" placeholder="Escriba su mensaje" id="mensaje"></textarea>
-
-                        </div>
-                        <br>
                         
+                        <div class="col-lg-6">
+                            <label>Numero de Puertas:</label>
+                            <select class="form-control" id="doornumber" name="doornumber"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo Combustible:</label>
+                            <select class="form-control" id="fueltype" name="fueltype"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo Carroceria:</label>
+                            <select class="form-control" id="carbody" name="carbody"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Localizacion del Motor:</label>
+                            <select class="form-control" id="enginelocation" name="enginelocation"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Marca:</label>
+                            <select class="form-control" id="companyname" name="companyname"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo Transmision:</label>
+                            <select class="form-control" id="drivewheel" name="drivewheel"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tipo motor:</label>
+                            <select class="form-control" id="enginetype" name="enginetype"></select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Longitud del carro:</label>
+                            <input type="number" id="carlength" class="form-control" placeholder="Digite la longitud del carro" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Ancho del carro:</label>
+                            <input type="number" id="carwidth" class="form-control" placeholder="Digite el ancho del carro" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Altura del carro:</label>
+                            <input type="number" id="carheight" class="form-control" placeholder="Digite la Altura del carro" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Tamaño del motor:</label>
+                            <input type="number" id="enginesize" class="form-control" placeholder="Digite el tamaño del motor" />
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Potencia:</label>
+                            <input type="number" id="horsepower" step="0.01" class="form-control" placeholder="Digite la potencia" />
+                        </div>
+
                     </div>
-                    <div class="" >
-                        <input type="button" class="btn btn-primary float-right" value="Guardar"
-                            style=" border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;"
-                            onClick="saveInfoContactUs()">
+                    <div class="form-group">
+                        <input type="button" style="margin:20px 15px 15px 115px" class="btn btn-primary" value="Predecir"
+                            onClick="predecir()">
+                        <input type="button" style="margin:20px 15px 15px 5px" class="btn btn-danger" value="Limpiar"
+                            onClick="limpiar()">
 
                     </div>
 
                 </div>
                 <!-- /.container-fluid -->
+
+
+
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Elkin Madrid, German Torres, Duvan Castro, Aldair Lara y Juan Alonso. All rights reserved - 2023</span>
+                            <span>Copyright &copy; Elkin Madrid, German Torres, Duvan Castro, Aldair Lara y Juan Alonso.
+                                All rights reserved - 2023</span>
                         </div>
                     </div>
                 </footer>
@@ -353,10 +317,12 @@
 
         <!-- Custom scripts for all pages-->
         <script src="js/sb-admin-2.min.js"></script>
-        <script src="js/contactus.js"></script>
-
 
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="js/predecir.js"></script>
+
+
+
 </body>
 
 </html>
