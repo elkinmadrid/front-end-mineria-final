@@ -1,3 +1,11 @@
+function clearForm() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("email_user").value = "";
+    document.getElementById("telefono").value = "";
+    document.getElementById("asunto").value = "";
+    document.getElementById("mensaje").value = "";
+}
+
 function saveInfoContactUs() {
 
     const nombre = document.getElementById("nombre").value;
@@ -29,6 +37,7 @@ function saveInfoContactUs() {
         console.log(response);
         let diag = document.getElementById('diag')
         if (response.status === 201) {            
+            clearForm()
             diag.innerHTML = response.data.message
 
         } else {
