@@ -313,49 +313,89 @@
                         <section>
                             <h2>En nuestro proyecto</h2>
                             <ul>
-                                <li>Comprensión del problema: El problema que se quiere resolver con estos datos es
-                                    predecir la mortalidad de los pacientes con insuficiencia cardíaca en función de una
-                                    serie de características clínicas y de laboratorio. El objetivo del proyecto es
-                                    desarrollar un modelo que pueda predecir con precisión la mortalidad de los
-                                    pacientes.</li>
-                                <li>Comprensión de los datos: Los datos están disponibles en el archivo
-                                    heart_failure_clinical_records_dataset.csv. Este conjunto de datos contiene
-                                    información sobre 299 pacientes con insuficiencia cardíaca, incluyendo
-                                    características clínicas y de laboratorio. Antes de comenzar a analizar los datos,
-                                    debemos explorarlos y analizarlos para comprender la relación con el problema a
-                                    resolver. En el caso de la regresión lineal múltiple, es importante tener en cuenta
-                                    que los datos deben cumplir ciertos supuestos, como la linealidad, la normalidad, y
-                                    la independencia. También es importante verificar que no haya valores faltantes y
-                                    que los datos estén correctamente etiquetados.</li>
-                                <li>Preparación de los datos: Antes de ajustar el modelo de regresión lineal múltiple,
-                                    se pueden realizar diversas tareas de limpieza y transformación de datos para
-                                    asegurarse de que los datos sean aptos para el modelo. Es posible que necesitemos
-                                    realizar un preprocesamiento de datos antes de poder analizarlos y modelarlos. Esto
-                                    puede incluir la eliminación de valores faltantes, la normalización de datos,
-                                    sustitucion por media, moda o mediana segun sea el caso y la selección de
-                                    características relevantes.
-                                    Es importante tener en cuenta que la selección de características debe basarse en su
-                                    relevancia y no solo en su correlación con la variable de resultado.
-                                    Todo esta preparacion se realizará desde google Colab .</li>
-                                <li>Modelización: Se pueden aplicar varios modelos de machine learning a los datos,
-                                    incluyendo modelos de regresión , árboles de decisión, redes neuronales,etc. Debemos
-                                    seleccionar el modelo que mejor se ajuste a los datos y que proporcione la mayor
-                                    precisión posible en la predicción de la mortalidad, para este ejercicio usaremos el
-                                    modelo de regresion lineal multiple, tal cual lo sugieré la clasificacion realizada
-                                    directamente de la pagina que contiene el set de datos.El modelo de regresión lineal
-                                    múltiple se ajustará a los datos para predecir la mortalidad de los pacientes con
-                                    insuficiencia cardíaca en base a las características clínicas y resultados de
-                                    laboratorio de los pacientes. </li>
-                                <li>Evaluación: Es importante evaluar el modelo seleccionado para asegurarnos de que
-                                    cumpla con los objetivos del proyecto. Esto puede incluir el score, la sensibilidad,
-                                    la predicción y otras métricas de rendimiento.</li>
-                                <li>Despliegue: Una vez que se ha seleccionado el modelo y se ha evaluado su
-                                    rendimiento, se puede implementar en producción. Es importante monitorear el
-                                    rendimiento del modelo en producción y realizar ajustes según sea necesario para
-                                    mantener su eficacia en la resolución del problema.
-                                    También es importante tener en cuenta que los datos utilizados en la implementación
-                                    deben cumplir con los mismos supuestos que se verificaron durante la comprensión de
-                                    los datos.
+                                <li>Comprensión del problema: En esta fase inicial, se define claramente el problema a
+                                    resolver:
+                                    <strong>la predicción de precios de automóviles</strong>, teniendo en cuenta
+                                    factores como los costos de producción
+                                    local y los valores de la competencia directa para saber si es viable o no. También
+                                    establecemos
+                                    nuestros objetivos específicos, como alcanzar una precisión mínima del 85% en las
+                                    predicciones.
+                                    Esto nos permite tener una visión clara de lo que queremos lograr y cómo medir el
+                                    éxito del proyecto.
+                                </li>
+                                <li>Comprensión de los datos: En esta fase, recopilamos y analizamos los datos
+                                    necesarios para el proyecto. Descargamos el conjunto de datos de carprices.xlsx, que
+                                    contiene información sobre características técnicas de los automóviles, como el año
+                                    de fabricación, la marca, el kilometraje, entre otras, y el archivo
+                                    <strong>CarPrice_Assignment.csv</strong> que contiene un conjunto de datos con
+                                    información de 205
+                                    registros de carros. En el caso de la regresión lineal múltiple, es importante tener
+                                    en cuenta que los datos deben cumplir ciertos supuestos, como la linealidad, la
+                                    normalidad y la independencia. También es importante verificar que no haya valores
+                                    faltantes y que los datos estén correctamente etiquetados. Mediante la exploración y
+                                    análisis de estos datos, buscamos comprender los datos y su relación con el problema
+                                    a resolver.
+                                </li>
+                                <li>Preparación de los datos: Para garantizar la calidad y la idoneidad de los datos
+                                    para el análisis y la modelización, llevamos a cabo una serie de pasos de
+                                    preparación de datos. Esto incluye la limpieza de los datos para eliminar valores
+                                    faltantes o duplicados o sustituir por moda, mediana o media según corresponda, la
+                                    selección de variables relevantes y la transformación de variables categóricas en
+                                    variables numéricas utilizando varias técnicas de procesamiento. Además, dividimos
+                                    los datos en conjuntos de entrenamiento y prueba para poder evaluar el rendimiento
+                                    del modelo posteriormente. Toda está preparación se realizará desde Google Colab.
+                                </li>
+                                <li>Modelización: En esta fase, desarrollamos modelos estadísticos y de machine learning
+                                    basados en algoritmos de regresión lineal para resolver el problema de predicción de
+                                    precios de automóviles. Seleccionamos un modelo de regresión lineal adecuado, como
+                                    la regresión lineal ordinaria o la regresión lineal con regularización, y ajustamos
+                                    sus parámetros según sea necesario. Luego, entrenamos el modelo utilizando el
+                                    conjunto de entrenamiento y evaluamos su rendimiento utilizando métricas de
+                                    evaluación como el error cuadrático medio (MSE) y el coeficiente de determinación
+                                    (R^2). </li>
+                                <li>Evaluación: En esta fase, evaluamos el modelo seleccionado y analizamos su
+                                    rendimiento en términos de precisión y eficacia. Utilizando el conjunto de prueba,
+                                    calculamos métricas de evaluación y las comparamos con los objetivos establecidos en
+                                    la fase de Comprensión del problema. Si el rendimiento del modelo no cumple con los
+                                    criterios establecidos, consideramos ajustar los parámetros del modelo o probar
+                                    otros algoritmos de regresión lineal más avanzados.</li>
+                                <li>Despliegue: Una vez satisfechos con el rendimiento del modelo de predicción de
+                                    precios de automóviles, pasamos a la fase de despliegue. En esta etapa,
+                                    implementamos y llevamos a cabo la integración del modelo en el sistema o proceso de
+                                    la organización. Los pasos clave en esta fase incluyen:
+                                    <ul>
+                                        <li> <strong> Implementación del modelo: </strong> Integramos el modelo de
+                                            predicción de precios de
+                                            automóviles en el sistema o proceso existente de la organización. Esto puede
+                                            involucrar el desarrollo de una interfaz de usuario que permita a los
+                                            usuarios
+                                            ingresar las características de un automóvil y obtener una estimación del
+                                            precio de
+                                            manera rápida y sencilla.</li>
+
+                                        <li> <strong> Pruebas y validación:</strong> Realizamos pruebas exhaustivas para
+                                            garantizar que el modelo
+                                            implementado funcione correctamente y produzca predicciones precisas.
+                                            Validamos el
+                                            modelo utilizando datos reales o simulados para comprobar su rendimiento en
+                                            un
+                                            entorno de producción.</li>
+
+                                        <li> <strong> Monitoreo del rendimiento:</strong> Establecemos un sistema de
+                                            monitoreo para rastrear el
+                                            rendimiento del modelo en producción. Esto nos permite identificar posibles
+                                            problemas o desviaciones en el rendimiento y tomar medidas correctivas si es
+                                            necesario.</li>
+
+                                        <li> <strong> Documentación:</strong> Proporcionamos documentación detallada que
+                                            describe el
+                                            funcionamiento del modelo, los requisitos técnicos y cualquier otra
+                                            información
+                                            relevante. Esto asegura que el personal esté adecuadamente preparado para
+                                            utilizar y
+                                            mantener el modelo de manera efectiva.</li>
+                                    </ul>
                                 </li>
                             </ul>
                         </section>
