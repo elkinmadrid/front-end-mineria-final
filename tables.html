@@ -56,7 +56,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-hospital"></i>
+                    <i class="fas fa-car"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Car Price</div>
             </a>
@@ -169,7 +169,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Cerrar Sesión
                                 </a>
                             </div>
                         </li>
@@ -182,52 +182,79 @@
                 <!-- Begin Page Content -->
                 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
                 <div class="container-fluid">
-
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Base de datos</h1>
-
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3 d-flex justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Datos Car Price</h6>
-                            <input type="button" onClick="abrirModalInsert()" class="btn btn-default ml-auto insert"
+                            <input type="button" onClick="abrirModalInsert()" class="btn btn-primary ml-auto insert"
                                 value="Añadir">
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive" style="height: 500px; overflow-y: auto;">
+                        <div class="card-body" style="margin-bottom: 70px;">
+                            <div class="table-responsive" style="height: calc(100vh - 220px); overflow-y: auto;">
                                 <table id="userList" class="table table-bordered table-hover table-striped">
                                     <thead class="light">
                                         <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Tipo de Combustible</th>
-                                            <th scope="col">Marca</th>
-                                            <th scope="col">Cantidad de puertas</th>
-                                            <th scope="col">Tipo de carroceria</th>
-                                            <th scope="col">Tipo de transmisión</th>
-                                            <th scope="col">Ubicacion del motor</th>
-                                            <th scope="col">Longitud del Auto</th>
-                                            <th scope="col">Ancho del Auto</th>
-                                            <th scope="col">Altura del Auto</th>
-                                            <th scope="col">Tipo motor</th>
-                                            <th scope="col">Tamaño del motor</th>
-                                            <th scope="col">Potencia</th>
-                                            <th scope="col">Precio</th>
-                                            <th>Opciones</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                ID</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Tipo de Combustible</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Marca</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Cantidad de puertas</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Tipo de carroceria</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Tipo de transmisión</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Ubicacion del motor</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Longitud del Auto</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Ancho del Auto</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Altura del Auto</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Tipo motor</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Tamaño del motor</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Potencia</th>
+                                            <th scope="col"
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Precio</th>
+                                            <th
+                                                style="position: sticky; top: 0; background-color: white; border: 1px solid #ddd;">
+                                                Opciones</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <!-- Contenido de la tabla -->
                                     </tbody>
                                 </table>
                             </div>
-
-
                         </div>
                     </div>
-
-
                 </div>
-                <!-- /.container-fluid -->
+
+
 
                 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
             </div>
@@ -261,15 +288,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Desea Cerrar Sesión?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión
+                    actual.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="login.html">Cerrar Sesión</a>
                 </div>
             </div>
         </div>

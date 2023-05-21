@@ -90,6 +90,7 @@
             margin-top: 20px;
             padding-top: 20px;
         }
+
         .sticky-footer {
             position: fixed;
             bottom: 0;
@@ -119,7 +120,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon ">
-                    <i class="fas fa-hospital"></i>
+                    <i class="fas fa-car"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">CRISP-DM</div>
             </a>
@@ -230,7 +231,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Cerrar Sesión
                                 </a>
                             </div>
                         </li>
@@ -241,52 +242,57 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-
                 <div class="container">
-
                     <header>
-                        <h1>Contáctenos</h1>
+                        <h1 class="text-center">Contáctenos</h1>
                     </header>
                     <div class="row">
-                        <div class="col-lg-6">
-
-                            <label>Nombre:</label>
-                            <input type="text" id="nombre" class="form-control" placeholder="Digite su nombre" />
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" class="form-control" placeholder="Digite su nombre" />
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <label>Email:</label>
-                            <input type="email" class="form-control" placeholder="Digite su email" id="email_user"/>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" placeholder="Digite su email"
+                                    id="email_user" />
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <label>Telefono:</label>
-                            <input type="text" class="form-control" placeholder="Digite su telefono" id="telefono"/>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono:</label>
+                                <input type="text" class="form-control" placeholder="Digite su teléfono"
+                                    id="telefono" />
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <label>Asunto:</label>
-                            <input type="text" class="form-control" placeholder="Escriba un asunto" id="asunto" />
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="asunto">Asunto:</label>
+                                <input type="text" class="form-control" placeholder="Escriba un asunto" id="asunto" />
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <label>Mensaje:</label>
-                            <textarea class="form-control" placeholder="Escriba su mensaje" id="mensaje"></textarea>
-
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje:</label>
+                                <textarea class="form-control" placeholder="Escriba su mensaje" id="mensaje"></textarea>
+                            </div>
                         </div>
-                        <br>
-                        
                     </div>
-                    <div class="" >
-                        <input type="button" class="btn btn-primary float-right" value="Guardar"
-                            style=" border: none; padding: 5px 15px; border-radius: 5px; font-size: 16px;"
+                    <div class="text-center">
+                        <input type="button" class="btn btn-primary" value="Guardar"
+                            style="padding: 10px 20px; font-size: 16px; border-radius: 5px;"
                             onClick="saveInfoContactUs()">
-
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Elkin Madrid, German Torres, Duvan Castro, Aldair Lara y Juan Alonso. All rights reserved - 2023</span>
+                            <span>Copyright &copy; Elkin Madrid, German Torres, Duvan Castro, Aldair Lara y Juan Alonso.
+                                All rights reserved - 2023</span>
                         </div>
                     </div>
                 </footer>
@@ -309,20 +315,20 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Desea Cerrar Sesión?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su
+                        sesión actual.</div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <a class="btn btn-primary" href="login.html">Cerrar Sesión</a>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Message information Modal-->
         <div class="modal fade" id="informationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
