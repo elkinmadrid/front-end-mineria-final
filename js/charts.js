@@ -24,7 +24,7 @@ let get_dataset = async () => {
         .catch(function (err) {
             console.log(err);
             if (err.response.status == 401) {
-                window.location.href = '/login.html';
+                window.location.href = '/front-end-mineria-final/login.html';
             }
         });
     return data_set;
