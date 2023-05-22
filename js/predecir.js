@@ -70,8 +70,8 @@ function loadData() {
     })
         .catch((error) => {
             console.log(error);
-            if (err.response.status == 401) {
-                window.location.href = '/front-end-mineria-final/index.html';
+            if (error.response.status == 401) {
+                window.location.href = '/front-end-mineria-final/login.html';
             }
         });
 

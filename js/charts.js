@@ -24,7 +24,7 @@ let get_dataset = async () => {
         .catch(function (err) {
             console.log(err);
             if (err.response.status == 401) {
-                window.location.href = '/frontend_mineria/login.html';
+                window.location.href = '/login.html';
             }
         });
     return data_set;
@@ -104,9 +104,147 @@ function createChartBar(etiquetas, valores, label_) {
 
 }
 
+let myPieChart = async () => {
+
+    myDynamicChat.destroy();
+    let tipoCombustible = data_set.map(item => item.fueltype)
+    let label = tipoCombustible.filter((item, index) => tipoCombustible.indexOf(item) === index)
+
+    let contador = {}
+    data_set.forEach(element => {
+        const fueltype = element.fueltype
+        if (!contador[fueltype]) {
+            contador[fueltype] = 1
+        }
+        else {
+            contador[fueltype]++;
+        }
+    });
+    const valores = Object.values(contador)
+
+    const colores = ["#5598D8", "#8555D8"]
+
+    var ctxmyPieChart = document.getElementById("myPieChart");
+    myDynamicChat = new Chart(ctxmyPieChart, {
+        type: 'pie',
+        data: {
+            labels: label,
+            datasets: [{
+                label: 'Cantidad de Vehiculos',
+                data: valores,
+                backgroundColor: colores,
+                borderColor: '#FFFFFF',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            cutoutPercentage: 200
+        }
+    });
+
+}
+
+
+let myScatterChart = async () => {
+
+    const prices = data_set.filter(item => item.price).map(item => item.price)
+    const horsepowers = data_set.filter(item => item.horsepower).map(item => item.horsepower)
+
+    const data = []
+    prices.forEach((element, index) => {
+        data.push({
+            x: horsepowers[index],
+            y: prices[index]
+        });
+    });
+
+    const ctxsCatterChart = document.getElementById('scatterChart').getContext('2d');
+
+    const scatterChart = new Chart(ctxsCatterChart, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Potencia vs Precio',
+                data: data
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'bottom'
+                }]
+            }
+        }
+    });
+
+}
+
+
+function color_background(amout_labels) {
+    colors = []
+
+    var colors = [];
+    for (var i = 0; i < amout_labels; i++) {
+        var alpha = Math.random(); // Generar un valor de transparencia aleatorio entre 0 y 1
+        var color = 'rgba(' + getRandomNumber(0, 255) + ', ' + getRandomNumber(0, 255) + ', ' + getRandomNumber(0, 255) + ', ' + alpha.toFixed(2) + ')';
+        colors.push(color);
+    }
+    return colors;
+}
+
+// Función auxiliar para generar un número aleatorio en un rango
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let myAreaChart =  async () => {
+    
+    let tipomotor = data_set.map(item => item.enginetype)
+    let labels = tipomotor.filter((item, index) => tipomotor.indexOf(item) === index)
+
+    let contador = {}
+    data_set.forEach(element => {
+        const enginetype = element.enginetype
+        if (!contador[enginetype]) {
+            contador[enginetype] = 1
+        }
+        else {
+            contador[enginetype]++;
+        }
+    });
+    const valores = Object.values(contador)
+
+    const colores = color_background(labels.length)
+
+    var ctxmyAreaChart = document.getElementById("myAreaChart");
+    const myAreaChart = new Chart(ctxmyAreaChart, {
+        type: 'polarArea',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Cantidad de Vehiculos',
+                data: valores,
+                backgroundColor: colores,
+                borderColor: '#FFFFFF',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            cutoutPercentage: 200
+        }
+    });
+}
+
+
 async function main() {
     await get_dataset();
     await myBarChart();
+    await myPieChart();
+    await myScatterChart();
+    await myAreaChart()
 }
 
 main();

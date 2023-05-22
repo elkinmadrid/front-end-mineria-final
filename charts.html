@@ -47,9 +47,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-motorcycle"></i>
+                    <i class="fas fa-car"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">MOTOS COLOMBIA</div>
+                <div class="sidebar-brand-text mx-3">CAR PRICE</div>
             </a>
 
             <!-- Divider -->
@@ -82,6 +82,11 @@
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Mostrar información</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="moduloadministrador.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Mod Admin</span></a>
             </li>
 
             <li class="nav-item">
@@ -142,7 +147,7 @@
                             </div>
                         </li>
 
-                       
+
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -156,7 +161,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -173,42 +178,104 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-                    <p class="mb-4">A continuación veremos los graficos del analisis de datos.</p>
-
+                    
                     <!-- Content Row -->
-                    <div class="row">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="h3 mb-2 text-gray-800">Charts</h1>
+                            <p class="mb-4">A continuación veremos los graficos del analisis de datos.</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
 
-                        <div class="col-xl-6 col-lg-12">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3">
-                                    <div class="row">
-                                        <h6 class="m-0 col-4 font-weight-bold text-primary">Grafico de Barra</h6>
-                                        <button id="btn-marcas" class="btn btn-primary col-2" onClick="myBarChart('marcas')" style="margin: 5px" type="button" >Marcas</button>
-                                        <button id="btn-carbody" class="btn btn-primary col-2" onClick="myBarChart('carbody')" style="margin: 5px;" type="button" >carroceria</button>
-                                        
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card shadow mb-4">
+                                        <!-- Card Header - Dropdown -->
+                                        <div class="card-header py-3">
+                                            <div class="row">
+                                                <h6 class="m-0 col-4 font-weight-bold text-primary">Grafico de Barra
+                                                </h6>
+                                                <button id="btn-marcas" class="btn btn-primary col-2"
+                                                    onClick="myBarChart('marcas')" style="margin: 5px"
+                                                    type="button">Marcas</button>
+                                                <button id="btn-carbody" class="btn btn-primary col-2"
+                                                    onClick="myBarChart('carbody')" style="margin: 5px;"
+                                                    type="button">carroceria</button>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body">
+                                            <div class="chart-bar">
+                                                <canvas id="myBarChart"></canvas>
+                                            </div>
+                                            <hr>
+                                            Cantidad de carros por Marca.
+                                        </div>
                                     </div>
-                                    
                                 </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-bar">
-                                        <canvas id="myBarChart"></canvas>
+
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card shadow mb-4">
+                                       
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">Grafico de Dispersion</h6>
+                                        </div>
+                                      
+                                        <div class="card-body">
+                                            <div class="pt-4">
+                                                <canvas id="scatterChart"></canvas>
+                                            </div>
+                                            <hr>
+                                        </div>
                                     </div>
-                                    <hr>
-                                    Cantidad de carros por Marca.
                                 </div>
+
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <div class="row">
+                                                <h6 class="m-0 col-4 font-weight-bold text-primary">Gráfico de Torta
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart-pie">
+                                                <canvas id="myPieChart"></canvas>
+                                            </div>
+                                            <hr>
+                                            Porcentaje de Vehiculos por Tipo de Combustible
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card shadow mb-4">
+                                       
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">Grafico de Dona - Cantidad de Vehiculo por tipo motor</h6>
+                                        </div>
+                                      
+                                        <div class="card-body">
+                                            <div class="pt-4">
+                                                <canvas id="myAreaChart"></canvas>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 
             </div>
+
+            <br><br><br><br><br><br>
             <!-- End of Main Content -->
 
             <!-- Footer -->
